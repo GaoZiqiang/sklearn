@@ -3,6 +3,7 @@ import numpy as np
  
 # dropout函数的实现
 def dropout(x, level):
+    print('x的shape',x.shape)
     if level < 0. or level >= 1: #level是概率值，必须在0~1之间
         raise ValueError('Dropout level must be in interval [0, 1[.')
     retain_prob = 1. - level
